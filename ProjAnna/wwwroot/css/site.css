@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+html {
+  font-size: 14px;
+}
+
+@font-face {
+    font-family: 'Basteleur Moonlight';
+    src: url('../fonts/basteleur/Basteleur-Moonlight.ttf');
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.navbar-title {
+    font-size: 24pt;
+    font-family: 'Basteleur Moonlight';
+    color: #FFF;
+}
+
+.navbar-items {
+    font-size: 20pt !important;
+}
+
+body {
+    background: radial-gradient(farthest-corner at 40px 40px, #de9ed7 0%, #a8e6e2 100%);
+    color: #FFF;
+}
+
+.collapsible {
+    background-color: #f0ccef;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14pt;
+    transition: 0.5s;
+}
+
+.button {
+    cursor: pointer;
+    color: #999;
+}
+
+.button-text-container {
+    position: relative;
+}
+
+.button:hover {
+    background-color: #ab80aa;
+    color: #EEE;
+    transition: 0.5s;
+}
+
+.align-end {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.card-content {
+    padding: 0 18px;
+    max-height: 0;
+    display: none;
+    overflow: hidden;
+    background-color: #fce0ff;
+    color: #777;
+    transition: max-height 0.2s ease-in-out;
+}
+
+.card-container {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 40pt;
+    font-family: 'Playfair Display', serif;
+    color: #80557b;
+    margin-bottom: 20px;
+}
+
+.contact-card {
+    font-size: 14pt;
+    color: #80557b;
+}
+
+.contact {
+    margin-left: 10px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.text-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.text-image {
+    width: 30vh;
+    height: auto;
+}
+
+.abt-container {
+    background-color: #fce0ff;
+    color: #777;
+    padding: 10px;
+    border: 1px solid #80557b;
+    font-size: 16pt;
+}
