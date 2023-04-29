@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'VT323';
+    src: url('/src/fonts/VT323-Regular.ttf');
+}
+
+.header {
+    font-family: 'VT323';
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 2vw;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header-operations {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tab {
+    width: 20vw;
+    min-width: 200px;
+    padding: 5px;
+    background: #cfc4ae;
+    border: solid #655d8a 3px;
+    font-size: 14pt;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.tab:hover {
+    cursor: pointer;
+    color: rgb(255, 230, 0);
+    text-decoration: underline;
+}
+
+.active {
+    background: #ffeecc;
+}
+
+.operation {
+    display: flex;
+    width: 40px;
+    font-size: 14pt;
+    justify-content: center;
+    background: #ffeecc;
+    border: solid #655d8a 3px;
+    line-height: 1.3;
+}
+
+.important {
+    background: #ff5757;
+    color: #FFF;
+}

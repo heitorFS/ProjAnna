@@ -1,0 +1,7 @@
+.main-container {
+    border: solid #655d8a 5px;
+    background: #fff5e0;
+    flex-grow: 1;
+    padding: 3vh 3vw;
+    overflow-y: auto;
+}
