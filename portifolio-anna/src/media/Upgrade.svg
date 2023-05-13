@@ -1,8 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" viewBox="45.02 70.18 164.72 114.38">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 32 192 88">
 
-<defs>
-</defs>
-<g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(45.02412451361867 45.02412451361867) scale(1.83 1.83)">
-	<path d="M 69.046 76.246 H 1 c -0.368 0 -0.706 -0.202 -0.88 -0.526 c -0.175 -0.323 -0.157 -0.717 0.046 -1.024 L 19.756 45 L 0.166 15.304 c -0.203 -0.307 -0.221 -0.701 -0.046 -1.025 c 0.174 -0.324 0.512 -0.526 0.88 -0.526 h 68.046 c 0.336 0 0.649 0.169 0.835 0.449 l 19.954 30.247 c 0.22 0.334 0.22 0.768 0 1.102 L 69.881 75.797 C 69.695 76.077 69.382 76.246 69.046 76.246 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,204,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round"/>
+<g transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+<path d="M0 920 l0 -40 40 0 40 0 0 -40 0 -40 40 0 40 0 0 -40 0 -40 40 0 40 0 0 -40 0 -40 40 0 40 0 0 -40 0 -40 40 0 40 0 0 -40 0 -40 -40 0 -40 0 0 -40 0 -40 -40 0 -40 0 0 -40 0 -40 -40 0 -40 0 0 -40 0 -40 -40 0 -40 0 0 -40 0 -40 -40 0 -40 0 0 -40 0 -40 760 0 760 0 0 40 0 40 40 0 40 0 0 40 0 40 40 0 40 0 0 40 0 40 40 0 40 0 0 40 0 40 40 0 40 0 0 40 0 40 40 0 40 0 0 40 0 40 -40 0 -40 0 0 40 0 40 -40 0 -40 0 0 40 0 40 -40 0 -40 0 0 40 0 40 -40 0 -40 0 0 40 0 40 -40 0 -40 0 0 40 0 40 -760 0 -760 0 0 -40z"/>
 </g>
 </svg>

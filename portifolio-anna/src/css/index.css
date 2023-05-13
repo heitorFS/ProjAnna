@@ -42,3 +42,7 @@ code {
 a {
   text-decoration: none;
 }
+
+.clickable:hover {
+  cursor: pointer;
+}

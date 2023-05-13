@@ -1,8 +1,8 @@
 import React from "react";
-const HeaderTabs = ({to, children, Options}) => {
+const HeaderTabs = ({to, children, ChangeTabs, CurrentPage}) => {
     return (
-        <div onClick={() => Options.ChangeTabs(to)}>
-            <div className={`tab ${Options.state.currentPage === to ? 'active' : ''}`}>
+        <div onClick={() => ChangeTabs(to)}>
+            <div className={`tab ${CurrentPage.includes(to) ? 'active' : ''}`}>
                 <div>
                     {children}
                 </div>
