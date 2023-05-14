@@ -3,6 +3,7 @@ import '../css/Project.css';
 
 import ProjectSidebar from "./ProjectSidebar";
 import ProjectResult from "./ProjectResult";
+import ProjectModal from "./ProjectModal";
 
 import { projects } from "../projects";
 
@@ -11,26 +12,46 @@ class Projects extends React.Component {
         super();
         this.state = {
             search: "",
-            type: {
-                drawing: false,
-                work: false,
-                personal: false
-            }
+            type: [],
+            tags: [],
+            highlights: false,
+            currentModal: (<></>)
         };
     }
 
-    changeType = (prop) => {
-        switch (prop) {
-            case 'Drawing':
-                this.setState({drawing: !this.state.type.drawing});
-                break;
-            
-            case 'Work':
-                this.setState({work: !this.state.type.work});
-                break;
+    changeTags = (prop) => {
+        console.log(prop);
+        console.log(this.state.tags)
+        const indexOfProp = this.state.tags.indexOf(prop);
+                var newTags = this.state.tags;
+        
+                if (indexOfProp > -1) {
+                    newTags.splice(indexOfProp, 1);
+                }
+                else {
+                    newTags.push(prop);
+        
+                }        
+                this.setState({tags: newTags})
+    }
 
+    changeType = (prop) => {        
+        switch (prop) {
+            case "Highlights":
+                this.setState({highlights: !this.state.highlights})
+                break;
             default:
-                this.setState({personal: !this.state.type.personal});
+                const indexOfProp = this.state.type.indexOf(prop);
+                var newTypes = this.state.type;
+        
+                if (indexOfProp > -1) {
+                    newTypes.splice(indexOfProp, 1);
+                }
+                else {
+                    newTypes.push(prop);
+        
+                }        
+                this.setState({types: newTypes})
                 break;
         }
     }
@@ -41,13 +62,31 @@ class Projects extends React.Component {
 
     render () {
         const filteredProjects = projects.filter(project => {
-            return project.title.toLowerCase().includes(this.state.search.toLowerCase());
+            if (this.state.highlights) {
+                return  project.title.toLowerCase().includes(this.state.search.toLowerCase()) &&
+                        project.highlight &&
+                        (this.state.type.includes(project.type) || !this.state.type.length) &&
+                        (this.state.tags.some(i => project.tags.includes(i)) || !this.state.tags.length);
+            }
+
+            return project.title.toLowerCase().includes(this.state.search.toLowerCase()) &&
+                   (this.state.type.includes(project.type) || !this.state.type.length) &&
+                   (this.state.tags.some(i => project.tags.includes(i)) || !this.state.tags.length);
         });
+
+        const closeModal = () => {
+            this.setState({currentModal: (<></>)});
+        }
+
+        const openProject = (project) => {
+            this.setState({currentModal: (<ProjectModal project={project} closeModal={closeModal} />)});
+        }
 
         return(
             <div className="project-grid">
-                <ProjectSidebar types={this.state.type} changeType={this.changeType} onChange={this.searchOnChange} />
-                <ProjectResult props={this.state} projects={filteredProjects} />
+                <ProjectSidebar tags={this.state.tags} types={this.state.type} highlights={this.state.highlights} changeTags={this.changeTags} changeType={this.changeType} onChange={this.searchOnChange} />
+                <ProjectResult props={this.state} projects={filteredProjects} openProject={openProject} />
+                {this.state.currentModal}
             </div>
         )
     }

@@ -40,7 +40,7 @@ class App extends Component {
           <div style={this.state.currentPage === 'Home' ? {width: '100%', height: '100%'} : {display: 'none', width: '100%', height: '100%'}}>
             <Home ChangeTabs={this.ChangeTabs} />
           </div>
-          <div style={this.state.currentPage === 'Projects' ? {width: '100%', height: '100%'} : {display: 'none', width: '100%', height: '100%'}}>
+          <div style={this.state.currentPage === 'Projects' ? {width: '100%', height: '100%', position: 'relative'} : {display: 'none', width: '100%', height: '100%'}}>
             <Projects />
           </div>
           <div style={this.state.currentPage === 'Home_2' ? {width: '100%', height: '100%', display: 'flex'} : {display: 'none', width: '100%', height: '100%'}}>
